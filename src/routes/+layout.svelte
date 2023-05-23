@@ -1,9 +1,15 @@
 <script>
+	import "../app.css"
 	import Header from './Header.svelte';
 	import './styles.css';
 </script>
 
 <div class="app">
+
+	<h1 class="text-3xl font-bold underline">
+		Hello world!
+	</h1>
+
 	<Header />
 
 	<main>
@@ -15,11 +21,12 @@
 	</footer>
 </div>
 
-<style>
+<style lang="postcss">
 	.app {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		color: white;
 	}
 
 	main {
