@@ -1,9 +1,35 @@
 <script>
     export let name = "";
+    export let description = "";
+    import Tag from './Tag.svelte';
 </script>
 
-<div class="rounded-xl bg-transparent shadow-lg p-5 m-9 flex border border-pink-500">
-    <div class="shrink-0">
-        <p>{name}</p>
+<div class="rounded-xl bg-transparent p-5 mt-0 mx-1 mb-4 border border-stone-700 project-container">
+    <div>
+        <span class="text-xl font-mono">{name}</span>
+        <div class="description-container">
+            <p class="text-xs break-words">
+                {description}
+            </p>
+        </div>
+        <div>
+            <Tag name="Python"></Tag>
+            <Tag name="Javascript"></Tag>
+            <Tag name="Go"></Tag>
+            <Tag name="Java"></Tag>
+            <Tag name="C#"></Tag>
+        </div>
     </div>
 </div>
+
+<style>
+.description-container {
+    width: 300px;
+    overflow: hidden;
+}
+
+.project-container {
+    width: auto;
+    min-height: auto;
+}
+</style>
