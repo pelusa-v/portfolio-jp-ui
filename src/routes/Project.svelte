@@ -4,7 +4,7 @@
     import Tag from './Tag.svelte';
 </script>
 
-<div class="rounded-xl bg-transparent p-5 mt-0 mx-1 mb-4 border border-stone-700 min-h-fit">
+<div class="rounded-xl bg-transparent p-5 mt-0 mx-1 mb-4 border border-stone-700 project-container">
     <div>
         <span class="text-xl font-mono">{name}</span>
         <div class="description-container">
@@ -24,7 +24,7 @@
 
 <style>
 .description-container {
-    width: 70%;
+    width: 300px;
     overflow: hidden;
 }
 

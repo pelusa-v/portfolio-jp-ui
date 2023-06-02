@@ -13,44 +13,58 @@
         <Gopher/>
     </div>
 </div>
-
-<div class="projects-container overflow-y-scroll scrollbar">
-    <div class="lg:columns-2 md:columns-2 sm:columns-1 gap-2 ">
-        <div class="break-inside-avoid-column">
-            <Project description={desc4} name="OMAR"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc3} name="Radar"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc2} name="WARE"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc4} name="OMAR"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc3} name="Radar"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc1} name="PIAC"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc4} name="OMAR"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc3} name="Radar"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc2} name="WARE"></Project>
-        </div>
-        <div class="break-inside-avoid-column">
-            <Project description={desc1} name="PIAC"></Project>
+<div class="sm:flex justify-center items-center">
+    <div class="projects-container overflow-y-scroll scrollbar">
+        <div class="lg:columns-2 md:columns-2 sm:columns-1 gap-2 ">
+            <div class="break-inside-avoid-column">
+                <Project description={desc4} name="OMAR"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc3} name="Radar"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc2} name="WARE"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc4} name="OMAR"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc3} name="Radar"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc1} name="PIAC"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc4} name="OMAR"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc3} name="Radar"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc2} name="WARE"></Project>
+            </div>
+            <div class="break-inside-avoid-column">
+                <Project description={desc1} name="PIAC"></Project>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
+.projects-hero{
+    width: 100%;
+    height: 8vh;
+}
+
 .projects-container{
+    width: 80%;
     max-height: 70vh;
 }
+
+@media screen and (min-width: 1500px) {
+  .projects-container {
+    width: 120%; /* Width of the div when the screen is larger than 768px */
+  }
+}
+
 </style>
