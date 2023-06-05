@@ -1,18 +1,15 @@
-<script>
+<script lang="ts">
 	import "../app.css"
 	import Header from './Header.svelte';
     import Sidebar from "./Sidebar.svelte";
 	import './styles.css';
-
-	let sideBarData = {
-		"About": ""
-	};
+	import sideBarData from "../models/SidebarItem";
 </script>
 
 <div class="app">
 
 	<Header />
-	<Sidebar/>
+	<Sidebar data={sideBarData}/>
 
 	<main>
 		<slot />

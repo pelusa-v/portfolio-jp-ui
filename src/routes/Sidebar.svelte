@@ -1,26 +1,32 @@
-<script>
+<script lang="ts">
+    import type { SidebarItem } from "../models/SidebarItem";
+
     export let isOpen = false; // Prop to control sidebar visibility
-    export let treeData = {};
+    export let data : SidebarItem[];
 </script>
 
 <div class="sidebar-container" class:open={isOpen}>
-    Modern sidebar
-
+    <h4 class="mb-5">Index</h4>
+    
     <ul>
-      <li class="text-gray-500">About me
-        <ul>
-          <li><span></span>Profile</li>
-          <li><span></span>Projects</li>
-          <li><span></span>Contact</li>
-        </ul>
-      </li>
-      <li class="text-gray-500">Blog
-        <ul>
-          <li><span></span>Posts</li>
-          <li><span></span>Tutorials</li>
-          <li><span></span>Books</li>
-        </ul>
-      </li>
+      {#each data as sideBarItem, i }
+        <li class="text-gray-500">
+          {#if sideBarItem.data.path !== undefined}
+            <a href="{sideBarItem.data.path}" >{sideBarItem.data.key}</a>
+          {:else}
+            {sideBarItem.data.key}
+          {/if}
+          <ul>
+            {#each sideBarItem.subItems as subItem }
+              {#if subItem.path !== undefined}
+                <li><span></span><a href="{subItem.path}" >{subItem.key}</a></li>
+              {:else}
+                <li><span></span>{subItem.key}</li>
+              {/if}
+            {/each}
+          </ul>
+        </li>
+      {/each}
     </ul>
 </div>
 
