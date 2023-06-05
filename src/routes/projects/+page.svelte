@@ -7,15 +7,15 @@
     let desc4 = "In scelerisque, leo ac accumsan ornare, ex lorem viverra enim, at porta sapien purus non quam. Nam imperdiet justo sed tempus porttitor. Suspendisse eget neque nibh. Praesent id est ut tortor ornare blandit. Nulla et mollis nisi. Nulla vitae gravida turpis, vitae lacinia felis. Proin feugiat enim at laoreet sodales"
 </script>
 
-<div class="projects-hero justify-center mb-4 md:flex lg:flex items-center">
+<div class="projects-hero justify-center mb-4 md:flex lg:flex items-center ">
     <h1 class="text-3xl">Explore my projects here!</h1>
     <div class="mx-3 mt-2 flex justify-center items-center">
         <Gopher/>
     </div>
 </div>
-<div class="sm:flex justify-center items-center">
+<div class="flex justify-center items-center">
     <div class="projects-container overflow-y-scroll scrollbar">
-        <div class="lg:columns-2 md:columns-2 sm:columns-1 gap-2 ">
+        <div class="lg:columns-2 md:columns-2 columns-1 gap-2 ">
             <div class="break-inside-avoid-column">
                 <Project description={desc4} name="OMAR"></Project>
             </div>
@@ -54,6 +54,18 @@
 .projects-hero{
     width: 100%;
     height: 8vh;
+}
+
+@media screen and (max-width: 765px) {
+  .projects-hero {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .projects-hero {
+    margin-bottom: 90px;
+  }
 }
 
 .projects-container{

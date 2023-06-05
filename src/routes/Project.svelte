@@ -24,7 +24,7 @@
 
 <style>
 .description-container {
-    width: 300px;
+    width: auto;
     overflow: hidden;
 }
 
