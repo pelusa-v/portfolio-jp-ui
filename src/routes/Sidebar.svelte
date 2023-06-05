@@ -2,15 +2,39 @@
     import type { SidebarItem } from "../models/SidebarItem";
     export let data : SidebarItem[];
 
-    let showSideBar = true; // Prop to control sidebar visibility
+    let showResponsiveSideBar = false; // Prop to control sidebar visibility
     function ShowHideSidebar(): void {
-      showSideBar = !showSideBar;
-      console.log(showSideBar);
+      showResponsiveSideBar = !showResponsiveSideBar;
     }
 </script>
 
-{#if showSideBar }
-  <div class="sidebar-container">
+<div class="sidebar-container">
+  <h4 class="mb-5 sidebar-item-title">Index</h4>
+  
+  <ul>
+    {#each data as sideBarItem, i }
+      <li class="sidebar-item-title text-gray-500">
+        {#if sideBarItem.data.path !== undefined}
+          <a class="sidebar-item-title" href="{sideBarItem.data.path}" >{sideBarItem.data.key}</a>
+        {:else}
+          {sideBarItem.data.key}
+        {/if}
+        <ul>
+          {#each sideBarItem.subItems as subItem }
+            {#if subItem.path !== undefined}
+              <li class="sidebar-item-title"><span></span><a href="{subItem.path}" >{subItem.key}</a></li>
+            {:else}
+              <li class="sidebar-item-title"><span></span>{subItem.key}</li>
+            {/if}
+          {/each}
+        </ul>
+      </li>
+    {/each}
+  </ul>
+</div>
+
+{#if showResponsiveSideBar }
+  <div class="sidebar-container-responsive">
     <button class="open-close-button" on:click={ShowHideSidebar}>Close</button>
     <h4 class="mb-5 sidebar-item-title">Index</h4>
     
@@ -55,14 +79,21 @@
   }
   
   .sidebar-button-open {
-    padding: 10px;
-    width: auto;
-    height: auto;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    background-color: rgba(46, 46, 48, 0.897);
-    transition: left 0.3s ease-in-out;
+    visibility: hidden;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .sidebar-button-open {
+      visibility: visible;
+      padding: 10px;
+      width: auto;
+      height: auto;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      background-color: rgba(46, 46, 48, 0.897);
+      transition: left 0.3s ease-in-out;
+    }
   }
 
   .sidebar-item-title {
@@ -101,7 +132,7 @@
     width: 200px;
     height: 100%;
     position: fixed;
-    top: 20vh;
+    top: 24vh;
     left: 10%;
     background-color: transparent;
     transition: left 0.3s ease-in-out;
@@ -112,7 +143,7 @@
         width: 200px;
         height: 100%;
         position: fixed;
-        top: 18vh;
+        top: 20vh;
         left: 15%;
         background-color: transparent;
         transition: left 0.3s ease-in-out;
@@ -133,6 +164,24 @@
 
   @media screen and (max-width: 1150px) {
     .sidebar-container {
+        visibility: hidden;
+    }
+  }
+
+  .sidebar-container-responsive {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    padding-top: 18vh;
+    padding-left: 20px;
+    top: 0;
+    left: 0;
+    background-color: rgba(46, 46, 48, 0.897);
+    transition: left 0.3s ease-in-out;
+  }
+
+  @media screen and (max-width: 1150px) {
+    .sidebar-container-responsive {
         width: 200px;
         height: 100%;
         position: fixed;
@@ -146,7 +195,7 @@
   }
 
   @media screen and (max-width: 480px) {
-    .sidebar-container {
+    .sidebar-container-responsive {
         width: 100vh;
         height: 100%;
         position: fixed;
@@ -159,7 +208,4 @@
     }
   }
 
-  .sidebar-container.open {
-    left: 0;
-  }
 </style>
