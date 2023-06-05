@@ -1,81 +1,42 @@
 <script>
     export let isOpen = false; // Prop to control sidebar visibility
-  </script>
+    export let treeData = {};
+</script>
 
 <div class="sidebar-container" class:open={isOpen}>
     Modern sidebar
-    <div class="text-gray-500">
-        projects
-    </div>
-    <div class="text-gray-500">
-        tags
-    </div>
-    <div class="text-gray-500">
-        projects
-    </div>
-    <div class="text-gray-500">
-        projects
-    </div>
-    <div class="text-gray-500">
-        projects
-    </div>
 
-    <ul class="directory-tree">
-        <li>
-          <span class="folder">Folder 1</span>
-          <ul>
-            <li>
-              <span class="folder">Subfolder 1.1</span>
-              <ul>
-                <li><span class="file">File 1.1.1</span></li>
-                <li><span class="file">File 1.1.2</span></li>
-              </ul>
-            </li>
-            <li>
-              <span class="file">File 1.2</span>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="file">File 2</span>
-        </li>
-      </ul>
+    <ul>
+      <li class="text-gray-500">About me
+        <ul>
+          <li><span></span>Profile</li>
+          <li><span></span>Projects</li>
+          <li><span></span>Contact</li>
+        </ul>
+      </li>
+      <li class="text-gray-500">Blog
+        <ul>
+          <li><span></span>Posts</li>
+          <li><span></span>Tutorials</li>
+          <li><span></span>Books</li>
+        </ul>
+      </li>
+    </ul>
 </div>
+
 
 <style>
 
-.directory-tree {
-  list-style: none;
+span {
+  border-bottom: 1px solid;
+    border-left: 1px solid;
+    height: 1.5rem;
+    width: 2rem;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
 }
 
-.folder::before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  background-color: #000;
-  margin-right: 6px;
-}
-
-.folder::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -15px;
-  border-left: 1px solid #000;
-  height: calc(100% - 6px);
-}
-
-.file::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -15px;
-  border-left: 1px solid #000;
-  height: 100%;
-}
 
   .sidebar-container {
     width: 200px;

@@ -3,6 +3,10 @@
 	import Header from './Header.svelte';
     import Sidebar from "./Sidebar.svelte";
 	import './styles.css';
+
+	let sideBarData = {
+		"About": ""
+	};
 </script>
 
 <div class="app">
