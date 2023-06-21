@@ -2,6 +2,7 @@
     import ProfilePhoto from './ProfilePhoto.svelte';
     import Gopher from '../Gopher.svelte';
     import ProfileSummary from './ProfileSummary.svelte';
+    import ExperienceBadge from './ExperienceBadge.svelte';
     let desc1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper justo a tellus rutrum varius. Maecenas quis metus vitae turpis tempus pharetra nec quis justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique nibh felis, non mattis mi hendrerit in. Sed non elit eu mi suscipit dictum elementum nec mauris"
     let desc2 = "Proyecto desarrollado con fines educativos"
     let desc3 = "Vivamus ac luctus massa. Quisque laoreet, ipsum non venenatis consectetur, mauris elit gravida nunc, tincidunt placerat elit tortor sit amet tellus. Ut vitae sagittis nibh."
@@ -16,8 +17,8 @@
 </div>
 
 <div class="flex justify-center items-center">
-  <div class="aboutme-container flex flex-wrap md:flex-nowrap">
-    <div class="flex flex-wrap justify-center items-center border w-full md:w-2/5 lg:w-2/5 md:order-2">
+  <div class="py-3 aboutme-container flex flex-wrap md:flex-nowrap">
+    <div class="flex flex-wrap justify-center items-center w-full md:w-2/5 lg:w-2/5 md:order-1">
       <div>
         <ProfilePhoto></ProfilePhoto>
         <ProfileSummary 
@@ -28,8 +29,32 @@
           summary="I like cats"></ProfileSummary>
       </div>
     </div>
-    <div class="flex justify-center items-center border w-full md:w-3/5 lg:w-3/5 md:order-1">
-      01
+    <div class=" w-full md:w-3/5 lg:w-3/5 md:order-2 overflow-y-scroll scrollbar">
+      <div class="px-10 py-2">
+        <div class="mb-5 text-sm font-light text-gray-400">
+          <p>I'm a passionate software developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book.</p>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+        <div>
+          <ExperienceBadge/>
+        </div>
+      </div>
     </div>
   </div>
 </div>

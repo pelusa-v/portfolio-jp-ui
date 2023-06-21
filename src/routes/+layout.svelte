@@ -8,7 +8,7 @@
 
 <div class="app">
 
-	<Header />
+	<!-- <Header /> -->
 	<Sidebar data={sideBarData}/>
 
 	<main>
