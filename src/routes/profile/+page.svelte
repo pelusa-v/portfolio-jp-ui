@@ -17,11 +17,9 @@
 
 <div class="flex justify-center items-center">
   <div class="aboutme-container flex flex-wrap md:flex-nowrap">
-    <div class="flex flex-wrap justify-center items-center  w-full md:w-2/5 lg:w-2/5 md:order-2">
-      <div class="block md:block lg:block">
+    <div class="flex flex-wrap justify-center items-center border w-full md:w-2/5 lg:w-2/5 md:order-2">
+      <div>
         <ProfilePhoto></ProfilePhoto>
-      </div>
-      <div class="block md:block lg:block">
         <ProfileSummary 
           full_name="Jean Pierre Leon Vivanco"
           github_url="https://github.com/pelusa-v"
@@ -30,7 +28,7 @@
           summary="I like cats"></ProfileSummary>
       </div>
     </div>
-    <div class="flex justify-center items-center w-full md:w-3/5 lg:w-3/5 md:order-1">
+    <div class="flex justify-center items-center border w-full md:w-3/5 lg:w-3/5 md:order-1">
       01
     </div>
   </div>

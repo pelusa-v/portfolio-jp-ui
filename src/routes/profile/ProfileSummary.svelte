@@ -26,7 +26,7 @@
         <hr class="my-2 w-8">
     </div>
     <div>
-        <p class="text-center font-light text-gray-500"><i class="fa-brands fa-github text-base"></i> <a href={github_url}>{github_username}</a></p>
+        <p class="text-center font-light text-gray-500"><i class="fa-brands fa-github"></i> <a href={github_url}>{github_username}</a></p>
     </div>
 </div>
 

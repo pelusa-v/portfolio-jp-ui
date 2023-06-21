@@ -2,8 +2,10 @@
     import profile_photo from '$lib/images/sample-photo.jpg';
 </script>
 
-<div class="circle-photo">
-    <img width="100%" height="100%" alt="photo_profile" src="{profile_photo}" />
+<div class="flex justify-center items-center">
+    <div class="circle-photo">
+        <img width="100%" height="100%" alt="photo_profile" src="{profile_photo}" />
+    </div>
 </div>
 
 <style>
