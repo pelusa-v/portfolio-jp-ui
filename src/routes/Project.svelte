@@ -1,12 +1,13 @@
-<script>
-    export let name = "";
-    export let description = "";
+<script lang="ts">
+    export let name : string;
+    export let projectPath : string;
+    export let description : string;
     import Tag from './Tag.svelte';
 </script>
 
 <div class="rounded-xl bg-transparent p-5 mt-0 mx-1 mb-4 border border-stone-700 project-container">
     <div>
-        <span class="text-xl font-mono">{name}</span>
+        <a class="text-xl font-mono" href={projectPath}>{name}</a>
         <div class="description-container">
             <p class="text-xs break-words">
                 {description}

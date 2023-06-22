@@ -17,34 +17,34 @@
     <div class="projects-container overflow-y-scroll scrollbar">
         <div class="lg:columns-2 md:columns-2 columns-1 gap-2 ">
             <div class="break-inside-avoid-column">
-                <Project description={desc4} name="OMAR"></Project>
+                <Project description={desc4} name="OMAR" projectPath="/OMAR"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc3} name="Radar"></Project>
+                <Project description={desc3} name="Radar" projectPath="/Radar"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc2} name="WARE"></Project>
+                <Project description={desc2} name="WARE" projectPath="/WARE"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc4} name="OMAR"></Project>
+                <Project description={desc4} name="OMAR" projectPath="/OMAR"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc3} name="Radar"></Project>
+                <Project description={desc3} name="Radar" projectPath="/Radar"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc1} name="PIAC"></Project>
+                <Project description={desc1} name="PIAC" projectPath="/PIAC"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc4} name="OMAR"></Project>
+                <Project description={desc4} name="OMAR" projectPath="/OMAR"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc3} name="Radar"></Project>
+                <Project description={desc3} name="Radar" projectPath="/Radar"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc2} name="WARE"></Project>
+                <Project description={desc2} name="WARE" projectPath="/WARE"></Project>
             </div>
             <div class="break-inside-avoid-column">
-                <Project description={desc1} name="PIAC"></Project>
+                <Project description={desc1} name="PIAC" projectPath="/PIAC"></Project>
             </div>
         </div>
     </div>
