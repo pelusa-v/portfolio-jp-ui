@@ -40,16 +40,16 @@
             scrambled it to make a type specimen book.</p>
         </div>
         <div>
-          <ExperienceBadge enterprise="Entel Perú" role="Full Stack Developer" tools={tools1} summary={desc1}/>
+          <ExperienceBadge enterprise="Entel Perú" role="Full Stack Developer" tools={tools1} summary={desc1} startDate="01/05/22" endDate="25/07/23"/>
         </div>
         <div>
-          <ExperienceBadge enterprise="Métrica Andina (Kyndryl - BCP)" role="Full Stack Developer" tools={tools2} summary={desc2}/>
+          <ExperienceBadge enterprise="Métrica Andina (Kyndryl - BCP)" role="Full Stack Developer" tools={tools2} summary={desc2} startDate="01/05/22" endDate="25/07/23"/>
         </div>
         <div>
-          <ExperienceBadge enterprise="OSC Top Solutions Group" role="Full Stack Developer" tools={tools1} summary={desc3}/>
+          <ExperienceBadge enterprise="OSC Top Solutions Group" role="Full Stack Developer" tools={tools1} summary={desc3} startDate="01/05/22" endDate="25/07/23"/>
         </div>
         <div>
-          <ExperienceBadge enterprise="EGO Telecom services" role="Backend Developer" tools={tools1} summary={desc4}/>
+          <ExperienceBadge enterprise="EGO Telecom services" role="Backend Developer" tools={tools1} summary={desc4} startDate="01/05/22" endDate="25/07/23"/>
         </div>
       </div>
     </div>
