@@ -7,6 +7,9 @@
     let desc2 = "Proyecto desarrollado con fines educativos"
     let desc3 = "Vivamus ac luctus massa. Quisque laoreet, ipsum non venenatis consectetur, mauris elit gravida nunc, tincidunt placerat elit tortor sit amet tellus. Ut vitae sagittis nibh."
     let desc4 = "In scelerisque, leo ac accumsan ornare, ex lorem viverra enim, at porta sapien purus non quam. Nam imperdiet justo sed tempus porttitor. Suspendisse eget neque nibh. Praesent id est ut tortor ornare blandit. Nulla et mollis nisi. Nulla vitae gravida turpis, vitae lacinia felis. Proin feugiat enim at laoreet sodales"
+    let tools1 = ["Bitbucket", "C#", ".NET", "Angular"];
+    let tools2 = ["Gitlab", "Python", "Javascript", "React", "Angular"];
+
 </script>
 
 <div class="aboutme-hero justify-center mb-4 md:flex lg:flex items-center ">
@@ -29,7 +32,7 @@
           summary="I like cats"></ProfileSummary>
       </div>
     </div>
-    <div class=" w-full md:w-3/5 lg:w-3/5 md:order-2 overflow-y-scroll scrollbar">
+    <div class=" w-full md:w-3/5 lg:w-3/5 md:order-2 md:overflow-y-scroll lg:overflow-y-scroll md:scrollbar lg:scrollbar">
       <div class="px-10 py-2">
         <div class="mb-5 text-sm font-light text-gray-400">
           <p>I'm a passionate software developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -37,22 +40,16 @@
             scrambled it to make a type specimen book.</p>
         </div>
         <div>
-          <ExperienceBadge/>
+          <ExperienceBadge enterprise="Entel Perú" role="Full Stack Developer" tools={tools1} summary={desc1}/>
         </div>
         <div>
-          <ExperienceBadge/>
+          <ExperienceBadge enterprise="Métrica Andina (Kyndryl - BCP)" role="Full Stack Developer" tools={tools2} summary={desc2}/>
         </div>
         <div>
-          <ExperienceBadge/>
+          <ExperienceBadge enterprise="OSC Top Solutions Group" role="Full Stack Developer" tools={tools1} summary={desc3}/>
         </div>
         <div>
-          <ExperienceBadge/>
-        </div>
-        <div>
-          <ExperienceBadge/>
-        </div>
-        <div>
-          <ExperienceBadge/>
+          <ExperienceBadge enterprise="EGO Telecom services" role="Backend Developer" tools={tools1} summary={desc4}/>
         </div>
       </div>
     </div>
